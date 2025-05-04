@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "ts-node main.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.5.0",
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,6 +1,7 @@
-type User = {
-    id: string;
-    username: string;
-    name: string;
-    walletId: string;
+import { Id, Username } from "./core";
+
+export type User = {
+    id: Id;
+    username: Username;
+    walletId: Id;
 }
