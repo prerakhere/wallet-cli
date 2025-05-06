@@ -49,7 +49,7 @@ export default class InMemoryTransactionRepository
       .filter((tx) => tx.from === username || tx.to === username)
       .map((tx) => ({
         id: tx.id,
-        user: tx.from === username ? tx.to : tx.from,
+        "counter party": tx.from === username ? tx.to : tx.from,
         "sent/received":
           tx.from === username
             ? TransactionFlow.Sent

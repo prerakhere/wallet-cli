@@ -112,14 +112,14 @@ export class CLIAppController {
         } else {
           const formatted = userTransactions.map((txn: any) => ({
             id: txn.id,
-            user: txn.user,
+            "counter party": txn["counter party"],
             "sent/received": txn["sent/received"],
             amount: txn.amount,
             status: txn.status,
             createdAt: new Date(txn.createdAt).toLocaleString(),
           }));
           this.cli.showSuccess(`Transactions for ${username}...`, false);
-          console.table(formatted);
+          console.table(formatted, ["id", "amount", "sent/received", "counter party", "status", "createdAt"]);
         }
       } else if (option === "exit") {
         return false;
