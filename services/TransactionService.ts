@@ -59,6 +59,9 @@ export class TransactionService {
       throw new Error("Insufficient balance");
     }
 
+    this.walletService.updateBalance(fromUserId, fromWallet.balance);
+    this.walletService.updateBalance(toUserId, toWallet.balance);
+
     const txnId = this.generateId();
     this.transactionRepository.create({
       txnId,

@@ -33,6 +33,10 @@ export class WalletService {
     );
   }
 
+  updateBalance(userId: Id, newBalance: Amount): void {
+    this.walletRepository.updateBalance(userId, newBalance);
+  }
+
   hasSufficientBalance(userId: Id, amountToTransfer: Amount): boolean {
     const balance = this.getBalance(userId);
     return balance >= amountToTransfer;
